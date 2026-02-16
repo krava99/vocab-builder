@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-body,
+/* body,
 div,
 dl,
 dt,
@@ -90,7 +90,7 @@ a:hover {
 a:active {
   text-decoration: none;
   color: inherit;
-}
+} */
 
 :root {
 }
@@ -121,9 +121,8 @@ body {
 }
 
 /* Desktop screen */
-@media only screen and (min-width: 1130px) {
+@media only screen and (min-width: 1440px) {
   .container {
-    max-width: 1130px;
-    padding: 0 15px;
+    max-width: 1440px;
   }
 }

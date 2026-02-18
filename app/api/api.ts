@@ -3,5 +3,5 @@ import axios, { AxiosError } from "axios";
 export type ApiError = AxiosError<{ error: string }>;
 
 export const api = axios.create({
-  baseURL: "https://vocab-builder-backend.p.goit.global",
+  baseURL: "https://vocab-builder-backend.p.goit.global/api",
 });

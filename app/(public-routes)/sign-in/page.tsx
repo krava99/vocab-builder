@@ -1,11 +1,11 @@
 "use client";
 
-import { Button, TextField } from "@mui/material";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { LoginRequest, loginUser } from "../../lib/backendApi";
+import { loginUser } from "../../lib/backendApi";
 import Image from "next/image";
+import type { LoginRequest } from "@/types/user";
 
 const SignIn = () => {
   const router = useRouter();
@@ -37,16 +37,14 @@ const SignIn = () => {
         </p>
 
         <form className="flex flex-col" action={handleSubmit}>
-          <TextField
-            className="!rounded-2xl !mb-4"
-            variant="outlined"
+          <input
+            className="rounded-2xl mb-4"
             name="email"
             placeholder="Email"
           />
 
-          <TextField
-            className="!rounded-2xl !mb-8"
-            variant="outlined"
+          <input
+            className="rounded-2xl mb-8"
             type="password"
             name="password"
             placeholder="Password"
@@ -54,13 +52,9 @@ const SignIn = () => {
 
           {error && <p className="text-red-500 mb-4">{error}</p>}
 
-          <Button
-            className="!rounded-4xl !py-4 !bg-[#85AA9F] !mb-4"
-            variant="contained"
-            type="submit"
-          >
+          <button className="rounded-4xl py-4 bg-[#85AA9F] mb-4" type="submit">
             Login
-          </Button>
+          </button>
         </form>
 
         <Link

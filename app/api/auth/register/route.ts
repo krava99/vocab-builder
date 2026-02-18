@@ -6,10 +6,8 @@ export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
 
-    // POST до бекенду на signup
     const apiRes = await api.post("/users/signup", body);
 
-    // Беремо токен з body
     const { token } = apiRes.data;
 
     if (!token) {
@@ -21,7 +19,7 @@ export async function POST(req: NextRequest) {
 
     // Кладемо JWT в httpOnly cookie
     const cookieStore = await cookies();
-    cookieStore.set("accessToken", token, {
+    cookieStore.set("token", token, {
       httpOnly: true, // JS не бачить токен
       secure: true, // HTTPS only
       sameSite: "lax",

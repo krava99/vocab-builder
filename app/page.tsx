@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 import SignUp from "./(public-routes)/sign-up/page";
 
 export default function HomePage() {

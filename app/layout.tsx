@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 import "./globals.css";
 import { Header } from "@/components/Header/Header";
-import Providers from "./providers";
+
 import localFont from "next/font/local";
 
 export const myFont = localFont({
@@ -34,17 +34,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${myFont.variable}  antialiased container`}>
-        <Providers>
-          <Header />
+        <Header />
 
-          <main>{children}</main>
+        <main>{children}</main>
 
-          <footer>
-            <p>
-              Created <time dateTime="2025">2025</time>
-            </p>
-          </footer>
-        </Providers>
+        <footer>
+          <p>
+            Created <time dateTime="2025">2025</time>
+          </p>
+        </footer>
       </body>
     </html>
   );

@@ -1,6 +1,5 @@
 "use client";
 
-import { Button, TextField } from "@mui/material";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
@@ -38,24 +37,17 @@ const SignUp = () => {
         </p>
 
         <form className="flex flex-col" action={handleSubmit}>
-          <TextField
-            className="!rounded-2xl !mb-4"
-            variant="outlined"
-            name="name"
-            placeholder="Name"
-          />
+          <input className="rounded-2xl mb-4" name="name" placeholder="Name" />
 
-          <TextField
-            className="!rounded-2xl !mb-4"
-            variant="outlined"
+          <input
+            className="rounded-2xl mb-4"
             type="email"
             name="email"
             placeholder="Email"
           />
 
-          <TextField
-            className="!rounded-2xl !mb-8"
-            variant="outlined"
+          <input
+            className="rounded-2xl mb-8"
             type="password"
             name="password"
             placeholder="Password"
@@ -63,13 +55,9 @@ const SignUp = () => {
 
           {error && <p className="text-red-500 mb-4">{error}</p>}
 
-          <Button
-            className="!rounded-4xl !py-4 !bg-[#85AA9F] !mb-4"
-            variant="contained"
-            type="submit"
-          >
+          <button className="rounded-4xl py-4 bg-[#85AA9F] mb-4" type="submit">
             Register
-          </Button>
+          </button>
         </form>
 
         <Link

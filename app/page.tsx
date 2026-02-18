@@ -1,10 +1,12 @@
-import Register from "./register/page";
+import Image from "next/image";
+
+import SignUp from "./(public-routes)/sign-up/page";
 
 export default function HomePage() {
   return (
     <div>
       <main className="container">
-        <Register />
+        <SignUp />
       </main>
     </div>
   );

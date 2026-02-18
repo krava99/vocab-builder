@@ -7,7 +7,7 @@ const theme = createTheme({
     },
   },
   typography: {
-    fontFamily: "Roboto, Arial, sans-serif",
+    fontFamily: "var(--font-myfont), Arial, sans-serif",
   },
 });
 
